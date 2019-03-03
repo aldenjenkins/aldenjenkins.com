@@ -1,0 +1,31 @@
+.description {
+  font-size: 16px;
+}
+
+.highcharts-tooltip span {
+    height:auto;
+    width:400px;
+    overflow:auto;
+    white-space:normal !important;
+    font-family: "Calendas Plus", "Hoefler Text", "Georgia", serif;
+  }
+
+.hidden {
+  display: none;
+}
+
+.post {
+  overflow: visible;
+}
+
+#container {
+  position: relative;
+  width: 100vw;
+  left: calc(-50vw + 50%);
+  right: calc(-50vw + 50%);
+}
+
+#container h4 {
+    font-family: "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif;
+}
+

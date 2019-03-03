@@ -1,0 +1,57 @@
+<div class="push"></div>
+  <footer>
+    <aside class="wrap">
+      <ol class="prev-posts">
+        <p class="list-title">Recent Posts</p>
+        {% for post in site.posts | limit:3 %} <!-- for1 -->
+            <li>
+              <span class="recent-title"><a href="{{ site.url }}{{ post.url }}" title="{{ post.title }}">{{ post.title | strip_html | strip_newlines }} </a></span>
+              <span class="date">{{post.date | date: "%b %d, %Y" }}</span>
+            </li>
+        {% endfor %}
+      </ol>
+
+      <div class="social">
+        <ul>
+            <li><a id="mail" href="/contact"><span class="foot-link">Email</span></a></li>
+
+            {% if site.owner.twitter %}
+            <li><a id="twit" href="http://twitter.com/{{ site.owner.twitter }}" target="_blank"><span class="foot-link">Twitter</span></a></li>
+            {% endif %}
+
+            <li><a id="rss" href="/feed.xml" target="_blank"><span class="foot-link">RSS</span></a></li>
+        </ul>
+    </div>
+    </aside>
+    <small>&copy; {{ site.time | date: '%Y' }} {{ site.owner.name }}.</small>
+  </footer>
+
+  <!-- Custom JS -->
+  <script src="{{ site.url }}/assets/js/scripts.js"></script>
+
+  <script>
+var ButtonForm = React.createClass({
+    render: function(){
+        return (
+            <div>
+                <h3>Click the button</h3>
+                <input type="submit" />
+            </div>
+        );
+    }
+});
+var App = React.createClass({
+    render: function(){
+        return (
+            <div>
+                <h1> Welcome to my button app!</h1>
+                <ButtonForm />
+            </div>
+        );
+    }
+});
+React.render(<App />,  document.getElementById("content"));
+  </script>
+
+  </body>
+</html>

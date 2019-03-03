@@ -1,0 +1,13 @@
+---
+---
+
+/* TEAM */
+Creator: {{ site.owner.name }}
+Contact: https://aldenjenkins.com/contact
+Twitter: @aldenjenks
+Github: @aldenjenkins
+
+/* SITE */
+Last update: {{ site.time | date: '%F' }}
+Standards: {{ site.tools.standards }}                        
+Software: {{ site.tools.software }}

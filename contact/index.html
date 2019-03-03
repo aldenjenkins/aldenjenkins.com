@@ -1,0 +1,106 @@
+---
+layout: portfolio
+title: Contact
+---
+    <head>
+      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    </head>
+    <nav class="navbar is-transparent is-planner">
+      <div class="container">
+        <div class="navbar-brand"><a class="navbar-item" href="/"><img src="../assets/img/aldenlogo.svg" alt="Alden Jenkins | Designer, Developer &amp; Deployer" height="48"></a></div>
+        <div class="navbar-menu" id="navMenu">
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <p class="buttons"><a class="button is-medium tooltip is-tooltip-bottom" data-tooltip="Reset" onclick="document.getElementById('form').reset();"><span class="icon is-small"><i class="fas fa-undo-alt"></i></span></a><a class="button is-medium tooltip is-tooltip-bottom" data-tooltip="Close" href="/"><span class="icon is-small"><i class="fas fa-times"></i></span></a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="is-form-page">
+      <section class="is-white has-text-centered">
+        <div class="container">
+          <div class="columns is-centered">
+              <div class="column is-three-quarters"><img class="avatar" src="../assets/img/me.svg">
+              <h1 class="title is-spaced is-size-1-desktop is-size-2-tablet is-size-3-mobile">Thanks for taking the time to reach out. What can I do for you today?</h1>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="is-white">
+        <div class="container">
+          <form id="form" accept-charset="UTF-8" action="https://ai2t6xhrv0.execute-api.us-east-1.amazonaws.com/prod/contact" method="POST">
+            <input type="hidden" name="redirectUrl" value="https://aldenjenkins.com/success" />
+            <div class="columns is-centered">
+             <div class="column is-half">
+               <div class="field">
+                 <label class="label">Name</label>
+                 <div class="control is-expanded">
+                   <input class="input is-large" name="name" type="text" required>
+                 </div>
+               </div>
+             </div>
+             <div class="column is-half">
+               <div class="field">
+                 <label class="label">Email</label>
+                 <div class="control is-expanded">
+                   <input class="input is-large" name="email" type="email" required>
+                 </div>
+               </div>
+             </div>
+            </div>
+            <div class="columns is-centered">
+              <div class="column">
+                <div class="field">
+                  <label class="label">Message</label>
+                  <div class="control is-expanded">
+                    <textarea class="textarea is-large" name="message" rows="5" required></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="g-recaptcha" data-sitekey="6LfHz24UAAAAAIy23Hqo9c17wFJ5_4F_sv9nYjSe" ></div>
+            <div class="columns is-centered">
+              <div class="column is-one-third">
+                <div class="field">
+                  <div class="control">
+                      <button type="submit" name="submit" class="button is-primary is-outlined is-medium is-fullwidth is-rounded">Submit</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </div>
+    <!--<script src="../assets/js/main.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.51/jquery.form.min.js"></script>-->
+    <!-- <script>
+      $(document).ready(function() {
+        $('#form').submit(function() {
+          $(this).ajaxSubmit({
+            error: function(xhr) {
+              status('Error: ' + xhr.status);
+            },
+           success: function(response) {
+            console.log(response);
+           }
+          });
+          // disable the page refresh.
+          return false;
+        });
+      });
+    </script> -->
+    <script>
+      $("form").submit(function(event) {
+      
+         var recaptcha = $("#g-recaptcha-response").val();
+         if (recaptcha === "") {
+            event.preventDefault();
+            alert("Please check the recaptcha");
+         }
+      });
+    </script>
+  </body>
+</html>

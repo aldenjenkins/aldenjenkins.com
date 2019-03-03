@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<meta charset="utf-8">
+<title>{% if page.title %}{{ page.title }} &#8211; {% endif %}{{ site.title }}</title>
+<meta name="description" content="{{ page.description }}">
+<meta name="keywords" content="{{ page.tags | join: ', ' }}">
+
+{% include graphs.html %}
+
+<link href="{{ site.url }}/feed.xml" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
+
+<!-- http://t.co/dKP3o1e -->
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Type -->
+<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ site.url }}/assets/css/entypo.css" media="all">
+<link rel='stylesheet' href='{{ site.url }}/assets/css/cal.css' media='all' />
+<link rel="stylesheet" href='{{ site.url }}/assets/css/autumn.css' media='all' />
+<link rel="stylesheet" href='{{ site.url }}/assets/css/mailchimp.css' media='all' />
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="{{ site.url }}/assets/css/i.css">
+
+<!-- Fresh Squeezed jQuery -->
+<!-- <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- Load Modernizr -->
+<!--<script src="{{ site.url }}/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>-->
+<script src="{{ site.url }}/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+<style type="text/css">
+  #mc_embed_signup{clear:left; font:14px Helvetica,Arial,sans-serif; }
+  #mc_embed_signup form{padding: 0;}
+</style>
+
+{% if page.custom_css %}
+  {% for stylesheet in page.custom_css %}
+    <link rel="stylesheet" href="{{ stylesheet }}" media="screen" type="text/css">
+  {% endfor %}
+{% endif %}
+
+{% if page.custom_js %}
+  {% for js_file in page.custom_js %}
+    <script src='{{ js_file }}' type="text/javascript"></script>
+  {% endfor %}
+{% endif %}
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="{{ site.url }}/favicon.ico">
+
+{% if jekyll.environment == 'production' %}
+  {% include analytics.html %}
+{% endif %}
+
+
+<body class="">
+<div id="bump">
+    <header class="site-header">
+      <div class="wrap">
+        <hgroup>
+          <h1><a href="/">{{ site.title }}</a></h1>
+        </hgroup>
+        <a href="#nav" class="menu"><span class='icons'>☰</span></a>
+        <nav role="navigation">
+          <ul>
+            <li>
+              <a href="/" title="{{ site.title }}">Home</a>
+            </li>
+            
+            {% for link in site.links %}
+                <li><a href="{% if link.external %}{{ link.url }}{% else %}{{ site.url }}{{ link.url }}{% endif %}" {% if link.external %}target="_blank"{% endif %}>{{ link.title }}</a></li>
+            {% endfor %}
+
+          </ul>
+        </nav>
+      </div>
+    </header>

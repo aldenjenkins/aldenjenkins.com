@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'Calendas Plus';
+    src: url('../fonts/Calendas-Plus.eot?#iefix') format('embedded-opentype'), url('../fonts/Calendas-Plus.otf') format('opentype'),
+    url('../fonts/Calendas-Plus.woff') format('woff'), url('../fonts/Calendas-Plus.ttf') format('truetype'), url('../fonts/Calendas-Plus.svg#Calendas-Plus') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

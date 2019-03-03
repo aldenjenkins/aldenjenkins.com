@@ -1,0 +1,79 @@
+title:            "Alden Jenkins"
+tagline:          "Developer, Debugger, &amp; Deployer"
+canonical:        https://aldenjenkins.com
+
+# Owner/author information
+owner:
+  name:           Alden Jenkins
+  first_name:     Alden
+  last_name:      Jenkins
+  email:          alden@aldenjenkins.com
+  twitter:        aldenjenks
+  github:         aldenjenkins
+  disqus:         aldenjenkinsdotcom 
+  tagline:        Learning to Love & Loving to Learn
+
+# Open Graph customization
+opengraph:
+  locale:           en_US
+
+# Links to include in top navigation
+# For external links add external: true
+links:
+  - title: Index
+    url: /blog
+  - title: Contact
+    url: /contact
+  - title: Game
+    url: https://thicc.io
+    external: true
+  - title: Github
+    url: https://github.com/aldenjenkins
+    external: true
+  - title: AI
+    url: http://alden.ai
+    external: true
+
+# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone:    America/New_York
+future:      true
+highlighter: rouge
+markdown:    kramdown
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..2
+  enable_coderay: false
+
+sass:
+    style: :compressed
+
+syntax_highlighter_opts:
+  line_numbers:
+  line_numbers_start: 1
+  tab_width: 4
+  bold_every: 10
+  css: class
+
+# https://github.com/mojombo/jekyll/wiki/Permalinks
+permalink:   /:categories/:title
+
+assets:
+  sources:
+    - /assets/fonts
+
+gems:
+  - jekyll-paginate
+
+paginate: 8
+paginate_path: "/blog/page:num/"
+
+# Don't leave this blank when you deploy!
+# baseurl: https://aldenjenkins.com/
+baseurl: ""
+
+# for serverfull deployment
+# include: [".htaccess"]
+# exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp"]

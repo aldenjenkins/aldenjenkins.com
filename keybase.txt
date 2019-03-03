@@ -1,0 +1,58 @@
+---
+---
+==================================================================
+https://keybase.io/jenks
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://aldenjenkins.com
+  * I am jenks (https://keybase.io/jenks) on keybase.
+  * I have a public key ASAmy4f8fb-1igGWcznzrnG3YzNy9mlAvROPR1ZArwrH1Qo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012026cb87fc7dbfb58a01967339f3ae71b7633372f66940bd138f475640af0ac7d50a",
+      "host": "keybase.io",
+      "kid": "012026cb87fc7dbfb58a01967339f3ae71b7633372f66940bd138f475640af0ac7d50a",
+      "uid": "8699d7f3d47d41f8116063c3dec7d119",
+      "username": "jenks"
+    },
+    "merkle_root": {
+      "ctime": 1537796737,
+      "hash": "527f1c8a085e7e7ce0842e9c12d99dcd4464ad404b0d5e3d7530d89de9b42e782eef4306f17e37f9152f0dece2cb9e4917b0c2ac40f0cb562911557975c7a0b6",
+      "hash_meta": "6398a76123661adf5bd108878afb39a83109f2f1dccdf8743667d934b780dc2b",
+      "seqno": 3677302
+    },
+    "service": {
+      "entropy": "Sk8KvHnpaO77CfuPlM4Aua1N",
+      "hostname": "aldenjenkins.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "2.7.0"
+  },
+  "ctime": 1537796749,
+  "expire_in": 504576000,
+  "prev": "8c2f1595a7a55599a95041313804455052ef0effca7eb8b172fa50125005dbc4",
+  "seqno": 10,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgJsuH/H2/tYoBlnM5865xt2MzcvZpQL0Tj0dWQK8Kx9UKp3BheWxvYWTESpcCCsQgjC8VlaelVZmpUEExOARFUFLvDv/KfrixcvpQElAF28TEIEu4IGcrUSbtSsAaow5Ive1YOFkxqOCciNbhluNQK7LfAgHCo3NpZ8RA2JGlxzWBXq/+uuPsMMaw3zjODOmBP4Ib1AmuaFbQAFurmY/PsEZodj//jv4CnpYKjd8oc2dk1xbSDz/wzqD+CahzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIHuPzegJx8OAjNL9ULAHwPHiycx909ROG2Sf7TPXxmDEo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jenks
+
+==================================================================
