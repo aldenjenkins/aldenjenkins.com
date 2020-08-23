@@ -58,7 +58,7 @@ syntax_highlighter_opts:
   css: class
 
 # https://github.com/mojombo/jekyll/wiki/Permalinks
-permalink:   /:categories/:title
+#permalink:   /:categories/:title
 
 assets:
   sources:
@@ -67,12 +67,14 @@ assets:
 gems:
   - jekyll-paginate
 
+plugins: [jekyll-paginate]
+
 paginate: 8
 paginate_path: "/blog/page:num/"
 
 # Don't leave this blank when you deploy!
-# baseurl: https://aldenjenkins.com/
-baseurl: ""
+baseurl: https://aldenjenkins.com/
+#baseurl: ""
 
 # for serverfull deployment
 # include: [".htaccess"]
