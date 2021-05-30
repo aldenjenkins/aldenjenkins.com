@@ -73,9 +73,10 @@ paginate: 8
 paginate_path: "/blog/page:num/"
 
 # Don't leave this blank when you deploy!
-baseurl: https://aldenjenkins.com/
+#baseurl: https://aldenjenkins.com/
 #baseurl: ""
 
 # for serverfull deployment
+include: [".well-known"]
 # include: [".htaccess"]
 # exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.rb", "tmp"]
