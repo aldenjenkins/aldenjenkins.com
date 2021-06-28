@@ -9794,3 +9794,10 @@ input[name="carousel"] {
 #carousel-2:checked ~ .carousel-slides .carousel-inner {
 	margin-left: -100%;
 }
+#carousel-3:checked ~ .carousel-nav label[for="carousel-3"] {
+	background-color: #326ce5;
+	border: 2px solid #326ce5;
+}
+#carousel-3:checked ~ .carousel-slides .carousel-inner {
+	margin-left: -200%;
+}
