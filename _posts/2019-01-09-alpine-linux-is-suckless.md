@@ -1,5 +1,5 @@
 ---
-title: "Alpine Linux is Suckless"
+title: "Alpine Linux is Mandatory"
 date: 2019-01-19
 author: Alden
 layout: post
