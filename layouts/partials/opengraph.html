@@ -1,0 +1,9 @@
+<!-- DSLs for various open graph languages -->
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="{{ if .Title }}{{ .Title }} &#8211; {{ end }}{{ site.Title }}">
+<meta property="og:description" content="{{ if .Description }}{{ .Description | truncate 120 }}{{ else }}{{ .Summary | plainify | truncate 120 }}{{ end }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ site.Title }}">
+{{ with .Params.image }}
+<meta property="og:image" content="{{ if or (strings.HasPrefix . "https://") (strings.HasPrefix . "http://") }}{{ . }}{{ else }}{{ printf "/assets/img/%s" . | absURL }}{{ end }}">
+{{ end }}

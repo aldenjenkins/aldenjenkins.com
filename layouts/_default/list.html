@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Alden Jenkins | Blog</title>
+
+  <meta name="author" content="{{ site.Params.ownerName }}" />
+  <meta name="description" content="{{ site.Params.description }}" />
+
+  <link rel="canonical" href="{{ .Permalink }}" />
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="{{ site.Title }} Feed" />
+
+  <link href="/assets/css/semantic.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/site.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+{{ $posts := where site.RegularPages "Section" "blog" }}
+{{ $paginator := .Paginate $posts }}
+
+<div class="flip-container">
+    <div class="flipper">
+        <section class="front">
+            <div class="ui top secondary menu" style="overflow-x: auto">
+                <div class="item">
+                    <a href="/"><img style="max-width:25px;" src="/assets/img/aldenlogo-white.svg" alt="{{ site.Params.ownerName }}"></a>
+                </div>
+                <div class="item">
+                    {{ if $paginator.HasPrev }}
+                    <a href="{{ $paginator.Prev.URL }}"><i class="enabled inverted big arrow circle outline left icon" title="Previous page"></i></a>
+                    {{ else }}
+                    <i class="disabled inverted big arrow circle outline left icon" title="Previous page"></i>
+                    {{ end }}
+                </div>
+                <div class="item">
+                    {{ if $paginator.HasNext }}
+                    <a href="{{ $paginator.Next.URL }}"><i class="enabled inverted big arrow circle outline right icon" title="Next page"></i></a>
+                    {{ else }}
+                    <i class="disabled inverted big arrow circle outline right icon" title="Next page"></i>
+                    {{ end }}
+                </div>
+            </div>
+            <div class="ui centered grid">
+                <div class="fifteen wide mobile fifteen wide tablet four wide computer column">
+                    <section class="ui top attached center aligned inverted segment">
+                        <div class="ui small circular image">
+                            <img src="/assets/img/me2.svg" alt="{{ site.Params.ownerName }}">
+                        </div>
+                        <h3 class="ui header">
+                            Musings by {{ site.Params.firstName }}
+                            <div class="sub header" style="color: white;">
+                                Learning to Love &amp; Loving to Learn
+                            </div>
+                        </h3>
+                    </section>
+                </div>
+                <div class="fifteen wide mobile fifteen wide tablet eleven wide computer column post-list">
+                    <div class="ui two stackable cards">
+                        {{ range $paginator.Pages }}
+                        {{ $feature := .Params.image }}
+                        <article class="black card">
+                            <div class="image">
+                                <div class="ui dimmer">
+                                    <div class="content">
+                                        <div class="center">
+                                            <a href="{{ .Permalink }}">
+                                                <h2 class="ui header" style="color: white;">
+                                                    {{ .Title }}
+                                                </h2>
+                                            </a>
+                                            <div class="ui top right attached black label">
+                                                {{ .Params.readTime }} read
+                                            </div>
+                                            <div class="ui bottom left attached black label">
+                                                <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}" itemprop="datePublished">{{ .Date.Format "January 02, 2006" }}</time>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <img
+                                    src="{{ if $feature }}{{ if or (strings.HasPrefix $feature "https://") (strings.HasPrefix $feature "http://") }}{{ $feature }}{{ else }}/assets/img/{{ $feature }}{{ end }}{{ else }}/assets/img/sky.jpg{{ end }}"
+                                    alt="{{ .Title }}"
+                                />
+                            </div>
+                        </article>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/semantic.min.js"></script>
+<script src="/assets/js/html2canvas.min.js"></script>
+<script src="/assets/js/bg.js"></script>
+<script src="/assets/js/site.js"></script>
+</body>
+</html>

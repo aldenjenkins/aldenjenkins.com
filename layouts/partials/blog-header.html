@@ -1,0 +1,20 @@
+<header class="site-header">
+  <div class="wrap">
+    <hgroup>
+      <h1><a href="/">{{ site.Title }}</a></h1>
+    </hgroup>
+    <a href="#nav" class="menu"><span class='icons'>&#9776;</span></a>
+    <nav role="navigation">
+      <ul>
+        <li>
+          <a href="/" title="{{ site.Title }}">Home</a>
+        </li>
+
+        {{ range site.Menus.main.ByWeight }}
+        <li><a href="{{ .URL }}" {{ if .Params.external }}target="_blank"{{ end }}>{{ .Name }}</a></li>
+        {{ end }}
+
+      </ul>
+    </nav>
+  </div>
+</header>

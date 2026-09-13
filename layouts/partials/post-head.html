@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<meta charset="utf-8">
+<title>{{ if .Title }}{{ .Title }} &#8211; {{ end }}{{ site.Title }}</title>
+<meta name="description" content="{{ .Description }}">
+<meta name="keywords" content="{{ with .Params.tags }}{{ delimit . ", " }}{{ end }}">
+
+{{ partial "opengraph.html" . }}
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="{{ site.Title }} Feed">
+
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="320">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Type -->
+<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="/assets/css/entypo.css" media="all">
+<link rel='stylesheet' href='/assets/css/cal.css' media='all' />
+<link rel="stylesheet" href='/assets/css/autumn.css' media='all' />
+<link rel="stylesheet" href='/assets/css/mailchimp.css' media='all' />
+
+<!-- For all browsers -->
+{{ $style := resources.Get "scss/main.scss" | css.Sass (dict "outputStyle" "compressed") }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}">
+
+<!-- Fresh Squeezed jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+
+<meta http-equiv="cleartype" content="on">
+
+<!-- Load Modernizr -->
+<script src="/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+<style type="text/css">
+  #mc_embed_signup{clear:left; font:14px Helvetica,Arial,sans-serif; }
+  #mc_embed_signup form{padding: 0;}
+</style>
+
+<!-- Icons -->
+<!-- 16x16 -->
+<link rel="shortcut icon" href="/favicon.ico">
+
+<body class="">
+<div id="bump">
+    {{ partial "blog-header.html" . }}

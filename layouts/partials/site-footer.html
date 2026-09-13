@@ -1,0 +1,34 @@
+<div class="push"></div>
+  <footer>
+    <aside class="wrap">
+      <ol class="prev-posts">
+        <p class="list-title">Recent Posts</p>
+        {{ $posts := where site.RegularPages "Section" "blog" }}
+        {{ range first 3 $posts }}
+            <li>
+              <span class="recent-title"><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></span>
+              <span class="date">{{ .Date.Format "Jan 02, 2006" }}</span>
+            </li>
+        {{ end }}
+      </ol>
+
+      <div class="social">
+        <ul>
+            <li><a id="mail" href="/contact"><span class="foot-link">Email</span></a></li>
+
+            {{ with site.Params.twitter }}
+            <li><a id="twit" href="http://twitter.com/{{ . }}" target="_blank"><span class="foot-link">Twitter</span></a></li>
+            {{ end }}
+
+            <li><a id="rss" href="/feed.xml" target="_blank"><span class="foot-link">RSS</span></a></li>
+        </ul>
+    </div>
+    </aside>
+    <small>&copy; {{ now.Format "2006" }} {{ site.Params.ownerName }}.</small>
+  </footer>
+
+  <!-- Custom JS -->
+  <script src="/assets/js/scripts.js"></script>
+
+  </body>
+</html>

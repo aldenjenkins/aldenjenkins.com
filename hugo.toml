@@ -1,0 +1,65 @@
+baseURL = "https://aldenjenkins.com/"
+languageCode = "en-us"
+title = "Alden Jenkins"
+enableEmoji = false
+enableRobotsTXT = false
+timeZone = "America/New_York"
+
+[pagination]
+  pagerSize = 8
+
+[permalinks]
+  blog = "/blog/:contentbasename/"
+
+[outputFormats.RSS]
+  mediaType = "application/rss+xml"
+  baseName = "feed"
+
+[params]
+  description   = "Cloud Native Engineer & Kubernetes Specialist"
+  firstName     = "Alden"
+  lastName      = "Jenkins"
+  ownerName     = "Alden Jenkins"
+  email         = "alden@aldenjenkins.com"
+  twitter       = "aldenjenks"
+  github        = "aldenjenkins"
+  ogImage       = "/assets/img/og_thumbnail.png"
+
+[[menu.main]]
+  name   = "Index"
+  url    = "/blog"
+  weight = 1
+
+[[menu.main]]
+  name   = "Contact"
+  url    = "/contact"
+  weight = 2
+
+[[menu.main]]
+  name     = "Game"
+  url      = "https://thicc.io"
+  weight   = 3
+  [menu.main.params]
+    external = true
+
+[[menu.main]]
+  name     = "Github"
+  url      = "https://github.com/aldenjenkins"
+  weight   = 4
+  [menu.main.params]
+    external = true
+
+[[menu.main]]
+  name     = "AI"
+  url      = "https://alden.ai"
+  weight   = 5
+  [menu.main.params]
+    external = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = "monokai"
+    lineNos = false
