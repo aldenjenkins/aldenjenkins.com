@@ -6,3 +6,7 @@ _site
 tags
 
 .jekyll-cache
+
+# Bundler local install
+.bundle
+vendor/bundle
