@@ -21,7 +21,7 @@
 <link rel="stylesheet" href='/assets/css/mailchimp.css' media='all' />
 
 <!-- For all browsers -->
-{{ $style := resources.Get "scss/main.scss" | css.Sass (dict "outputStyle" "compressed") }}
+{{ $style := resources.Get "scss/main.scss" | css.Sass (dict "outputStyle" "compressed" "transpiler" "dartsass") }}
 <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 
 <!-- Fresh Squeezed jQuery -->
